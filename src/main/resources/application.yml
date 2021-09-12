@@ -1,0 +1,25 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    password: password
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        cache:
+          use_query_cache: false
+          use_second_level_cache: false
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+        show_sql: true
+        type: trace
+
+server:
+  port: 8081
